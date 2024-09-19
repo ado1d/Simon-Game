@@ -1,0 +1,127 @@
+body {
+  text-align: center;
+  background-color: #034285;
+  margin: 0;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.text {
+  font-size: 2rem;
+  color: #FEF2BF;
+  margin: 2rem 0;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 1rem;
+  width: 100%;
+  max-width: 600px; 
+  margin: 0 auto;
+  place-items: center; 
+  padding: 1rem;
+}
+
+.btn {
+  height: 20vw;
+  width: 20vw;
+  max-width: 200px;
+  max-height: 200px;
+  border: 8px solid black;
+  border-radius: 15%;
+  cursor: pointer;
+  transition: transform .1s, box-shadow .2s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.red {
+  background-color: #FF4C4C;
+}
+
+.green {
+  background-color: #4CAF50;
+}
+
+.blue {
+  background-color: #4C6EFF;
+}
+
+.yellow {
+  background-color: #F9FF4C;
+}
+
+.pressed {
+  box-shadow: 0 0 20px white;
+  background-color: grey;
+}
+
+.game-over {
+  background-color: red;
+  opacity: 0.8;
+}
+
+#high-score {
+  font-size: 1.2rem;
+  text-align: right;
+  margin-right: 10%;
+  margin-top: 10%;
+}
+
+
+footer {
+  /* background-color: #143a63; */
+  padding: 2rem 0;
+  color: #FEF2BF;
+  text-align: center;
+  margin-top: 2rem;
+  font-family: 'Press Start 2P', cursive;
+}
+
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.4rem;
+  
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+}
+
+
+@media (max-width: 600px) {
+  .text {
+    font-size: 1.5rem;
+  }
+  
+  .btn {
+    height: 25vw;
+    width: 25vw;
+  }
+
+  .icon {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+  }
+  
+  .social-icons {
+    gap: 1.1 rem;
+  }
+
+  footer {
+    margin-top: 5rem;
+  }
+
+}
+
