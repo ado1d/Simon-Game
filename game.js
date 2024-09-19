@@ -22,14 +22,14 @@ function nextSequence() {
 }
 
 var button = $(".btn");
-button.on("click touchstart", function(event) {
+button.on("click", function(event) {
     var userChosenColor = this.classList[1];
     userClickedPattern.push(userChosenColor);
-    console.log(userClickedPattern);
+    //console.log(userClickedPattern);
     playSound(userChosenColor);
     animatePress(userChosenColor);
 
-    console.log(userClickedPattern.length - 1);
+   // console.log(userClickedPattern.length - 1);
     if (started) checkAnswer(userClickedPattern.length - 1);
 });
 
