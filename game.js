@@ -23,9 +23,9 @@ function nextSequence() {
   
 
 var button = $(".btn");
-button.on("click touchstart", function(event) {
+button.on("click function(event) {
 
-    event.preventDefault();
+    //event.preventDefault();
 
     var userChosenColor = this.classList[1];
     userClickedPattern.push(userChosenColor);
