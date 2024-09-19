@@ -23,7 +23,10 @@ function nextSequence() {
   
 
 var button = $(".btn");
-button.on("click", function(event) {
+button.on("click touchstart", function(event) {
+
+    event.preventDefault();
+
     var userChosenColor = this.classList[1];
     userClickedPattern.push(userChosenColor);
     console.log(userClickedPattern);
@@ -36,7 +39,7 @@ button.on("click", function(event) {
 });
 
 //start
-$(document).on("keydown", function() {
+$(document).on("keydown touchstart", function() {
     if (!started) {
         started = true;
         level++;
@@ -61,7 +64,7 @@ function checkAnswer (currentLevel) {
         console.log("wrong");
         playSound("wrong");
 
-        $("h1").text("Game Over, Press Any Key to Restart");
+        $("h1").text("Game Over, Press Any Key or touch the screen to Restart");
 
         $("body").addClass("game-over");
         setTimeout(() => {
